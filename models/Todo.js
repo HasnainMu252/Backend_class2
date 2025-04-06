@@ -2,15 +2,23 @@ const mongoose = require("mongoose")
 
 const  todoSchema = new mongoose.Schema(
     {
+
+        id:{
+            type:Number,
+            required:true,
+            maxLength:6,
+        },
+       
         title:{
             type:String,
             required:true,
             maxLength:50,
         },
+       
         shortName:{
             type:String,
             required:false,
-            maxLength:5
+            maxLength:50,
         },
         description:{
             type:String,
